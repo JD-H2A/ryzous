@@ -1,0 +1,57 @@
+type Severity = 
+ variant {
+   Critical;
+   High;
+   Low;
+   Medium;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok: ContactSubmission;
+ };
+type ProjectStatus = 
+ variant {
+   Fixed;
+   InProgress;
+ };
+type Project = 
+ record {
+   afterCode: text;
+   beforeCode: text;
+   category: text;
+   description: text;
+   id: nat;
+   severity: Severity;
+   status: ProjectStatus;
+   targetName: text;
+   vulnerabilityType: text;
+ };
+type DashboardStats = 
+ record {
+   bugsFixed: nat;
+   securityScore: nat;
+   totalProjects: nat;
+   vulnerabilitiesFound: nat;
+ };
+type ContactSubmission = 
+ record {
+   email: text;
+   id: nat;
+   message: text;
+   name: text;
+   timestamp: int;
+ };
+type ContactInput = 
+ record {
+   email: text;
+   message: text;
+   name: text;
+ };
+service : {
+  getContacts: () -> (vec ContactSubmission) query;
+  getDashboardStats: () -> (DashboardStats) query;
+  getProject: (id: nat) -> (opt Project) query;
+  getProjects: () -> (vec Project) query;
+  submitContact: (input: ContactInput) -> (Result);
+}

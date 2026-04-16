@@ -1,0 +1,23 @@
+{
+  "overview": "Ryzous is a professional cybersecurity company web application with a hacker-inspired dark UI. It showcases penetration testing services, vulnerability case studies, and an interactive security dashboard — designed to look and feel like a real-world security startup.",
+  "features": [
+    "Dark hacker-inspired UI with neon green, cyan, and purple accents",
+    "Home page with animated activity feed and service showcase",
+    "Interactive security dashboard with stats, process flow, and charts",
+    "Proof/portfolio page with vulnerability case studies and full-report modals",
+    "Terminal-style exploit preview in project detail views",
+    "Services page covering Web Pentesting, API Security, Network Testing, Code Review",
+    "Contact form with backend storage and XSS protection",
+    "Glassmorphism card effects and smooth animations throughout"
+  ],
+  "category": "showcase",
+  "tags": [
+    "cybersecurity",
+    "portfolio",
+    "dashboard",
+    "dark-theme",
+    "hacker-ui",
+    "startup"
+  ],
+  "last_updated": "2026-04-16T02:18:14.742Z"
+}

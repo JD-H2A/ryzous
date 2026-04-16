@@ -1,0 +1,33 @@
+// Version: 1.0.0
+type ContactSubmission__93684224 =
+  {email : Text; id : Nat; message : Text; name : Text; timestamp : Int};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type ProjectStatus__916318104 = {#Fixed; #InProgress};
+type Project__720644384 =
+  {
+    afterCode : Text;
+    beforeCode : Text;
+    category : Text;
+    description : Text;
+    id : Nat;
+    severity : Severity__421006580;
+    status : ProjectStatus__916318104;
+    targetName : Text;
+    vulnerabilityType : Text
+  };
+type Severity__421006580 = {#Critical; #High; #Low; #Medium};
+actor {
+  stable projects :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Project__720644384]];
+      var elementIndex : Nat__490723111
+    };
+  stable submissions :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ContactSubmission__93684224]];
+      var elementIndex : Nat__490723111
+    }
+};
